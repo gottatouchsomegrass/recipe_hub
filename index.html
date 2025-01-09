@@ -1,17 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <div class="p-4 bg-black text-white h-screen">
-        <h1>My First Heading</h1>
-        <p>My first paragraph.</p>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="alert('Hello World')">Click me</button>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Hub</title>
+    <link rel="shortcut icon" href="favicon_option_5.PNG" type="image/PNG" sizes="64x64" />
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body class="font-sans text-gray-800 bg-gray-100">
+    <!-- Header -->
+    <header class="sticky top-0 z-10 bg-white">
+      <div class="container flex items-center justify-between px-4 py-4 mx-auto">
+        <div class="text-2xl font-bold text-green-500">
+          <a href="#">RecipeHub</a>
+        </div>
+        <nav>
+          <ul class="hidden md:space-x-6 md:flex ">
+            <li><a href="#home" class="hover:text-green-500">Home</a></li>
+            <li><a href="#recipes" class="hover:text-green-500">Recipes</a></li>
+            <li><a href="#about" class="hover:text-green-500">About</a></li>
+            <li><a href="#contact" class="hover:text-green-500">Contact</a></li>
+          </ul>
+          <buttton id="hamburger" class="cursor-pointer hover:text-green-500 md:hidden"><ion-icon size="large"  name= "menu"></ion-icon>
+          </buttton>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 bg-green-100">
+      <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-bold text-gray-800">Welcome to <span class="text-4xl font-bold text-green-500"> RecipeHub</span></h1>
+        <p class="mt-4 text-lg text-gray-600">
+          Your one-stop destination for delicious recipes!
+        </p>
+        <!-- search bar -->
+        <form class="z-0 max-w-sm mx-auto md:max-w-lg" id="search-button">   
+          <label for="default-search" class="mb-2 text-sm font-medium text-gray-800 sr-only dark:text-white">Search</label>
+          <div class="relative mt-10">
+              <input type="search" id="user-input" class="block w-full p-4 text-sm text-white placeholder-gray-400 bg-gray-800 border border-gray-400 rounded-lg ps-5 focus:ring-green-500 focus:border-green-500" placeholder="Search for Recipies..." />
+              <button type="submit"  class="text-white absolute end-2.5 bottom-2.5 focus:ring-1 font-medium rounded-lg text-sm px-2 py-2 bg-green-300 hover:bg-green-600 focus:ring-green-100">
+                <svg class="w-4 h-4 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>
+              </button>
+          </div>
+        </form>
+        
+
+      </div>
+    </section>
+
+    <!-- onclick="scrollToSection('recipes')" -->
+
+    <!-- Recipes Section -->
+    <section id="recipes" class="py-16">
+      <div id="main" class="container mx-auto">
+        <h2 class="mb-8 text-3xl font-bold text-center" id="heading">Featured Recipes</h2>
+        <div id="recipe-container" class="grid grid-cols-1 gap-6 mx-8 md:grid-cols-2 lg:grid-cols-3 place-content-center">
+          <!-- Recipes will be dynamically loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+      <div class="container mx-auto text-center">
+        <h2 class="mb-4 text-3xl font-bold">About Us</h2>
+        <p class="max-w-md mx-auto text-gray-600 md:max-w-xl">
+          Recipe Hub is dedicated to bringing you the best recipes from around the world. </br>
+          Whether you’re a beginner or a pro, we have something for everyone.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-white bg-gray-800">
+      <div class="container mx-auto text-center">
+        &copy; 2025 Recipe Hub. All rights reserved.</br>
+        <div class="logo"></div>
+        Made by <code>gottatouchsomegrass</code>
+      </div>
+    </footer>
+
+    <!-- Script -->
     <script src="code.js"></script>
-</body>
+  </body>
 </html>
