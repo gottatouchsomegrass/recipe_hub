@@ -24,7 +24,6 @@ async function fetchRecipes() {
     }
 
     const data = await response.json();
-    console.log(data.recipes);
     displayRecipes(data.recipes);
   } catch (error) {
     console.error("Error fetching recipes:", error);
@@ -81,7 +80,6 @@ async function searchRecipes() {
     return;
   }
   const searchURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${searchInput}&addRecipeInformation=true&number=9`;
-  console.log(searchURL);
   try {
     const response = await fetch(searchURL);
 
@@ -91,7 +89,6 @@ async function searchRecipes() {
     }
 
     const data = await response.json();
-    console.log(data.results);
     const heading = document.getElementById("heading");
     heading.textContent = "Searched Results";
     displayRecipes(data.results);
