@@ -99,3 +99,17 @@ async function searchRecipes() {
     searchbutton.disabled = false;
   }
 }
+
+const hamburger = document.getElementById("hamburger");
+const closeicon = document.getElementById("close");
+const navMenu = document.getElementById("nav-menu");
+const icon = document.getElementById("icon");
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("hidden");
+  if (!navMenu.classList.contains("hidden")) {
+    icon.name = "close";
+  }
+  if (navMenu.classList.contains("hidden")) {
+    icon.name = "menu";
+  }
+});
