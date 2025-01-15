@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", fetchRecipes, { once: true });
 
 // Spoonacular API Configuration
 const API_KEY = "5d25b30c3cb8413cbfd10d06a27ef9ad";
-const API_URL = `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=9`;
+const API_URL = `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=6`;
 
 // Container to display recipes
 const recipeContainer = document.getElementById("recipe-container");
@@ -79,7 +79,7 @@ async function searchRecipes() {
     alert("Please enter a search term...");
     return;
   }
-  const searchURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${searchInput}&addRecipeInformation=true&number=9`;
+  const searchURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${searchInput}&addRecipeInformation=true&number=6`;
   try {
     const response = await fetch(searchURL);
 
